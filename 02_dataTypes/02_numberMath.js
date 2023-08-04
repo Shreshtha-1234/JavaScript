@@ -54,24 +54,24 @@
 
 // Random() returns value between 0(included) & 1 (excluded)    <1
 
-console.log(Math.random())
+// console.log(Math.random())
 
-console.log(Math.floor(Math.random()) )  // random integers here 0 because random gives less than 1
+// console.log(Math.floor(Math.random()) )  // random integers here 0 because random gives less than 1
 
-console.log(Math.floor(Math.random()*10) ) //can give 0 as well
+// console.log(Math.floor(Math.random()*10) ) //can give 0 as well
 
-console.log(Math.floor(Math.random()*10) + 1) // min 1 aegi value
+// console.log(Math.floor(Math.random()*10) + 1) // min 1 aegi value
 
 // Returns a random integer from 0 to 100:
-console.log(Math.floor(Math.random() * (100+1)));
+// console.log(Math.floor(Math.random() * (100+1)));
 
 
 // very important to get random number between min included and max excluded
-console.log(Math.floor(Math.random() * (max - min) ) + min);
+// console.log(Math.floor(Math.random() * (max - min) ) + min);
 
 
 // very important to get random number between min and max both included
-console.log(Math.floor(Math.random() * (max - min + 1) ) + min);
+// console.log(Math.floor(Math.random() * (max - min + 1) ) + min);
 
 // why adding min ? if random fn gives 0.0-- then multiplying it by 20(lets say) gives 0.87 floor wil give 0
 // so to cover that
