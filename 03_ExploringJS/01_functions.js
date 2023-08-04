@@ -48,3 +48,21 @@
 //     console.log(`The username is ${obj?.name}`);
 // }
 // tellName()
+
+
+
+// IMPORTANT calling function before decalring
+// in case of direct function..it is allowed because of hoisting
+// in case of function stored in variable not allowed just like const
+
+console.log(fun1("Raj"));
+console.log(fun2("Shrey"));
+
+function fun1(val)
+{
+    return `Hello ! ${val} How are you?`
+}
+
+const fun2 = function(val){
+    return `Hello ! ${val} How are you?`
+}
