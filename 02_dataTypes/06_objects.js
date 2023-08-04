@@ -7,7 +7,7 @@
 // Object.create()
 //singleton means we can create only one object of a class and that object can be accessed globally
 
-// way 3: let a = new Object()
+// way 3: let a = new Object() SINGLETON OBJECT
 
 
 
