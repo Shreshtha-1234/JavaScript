@@ -1,4 +1,4 @@
-// -> 1. two ways to create objects
+// -> 1. three ways to create objects
 
 // way 1 : object literak
 // const a = {}
@@ -6,6 +6,8 @@
 // way2 : constructor method that creates singlton object
 // Object.create()
 //singleton means we can create only one object of a class and that object can be accessed globally
+
+// way 3: let a = new Object()
 
 
 
