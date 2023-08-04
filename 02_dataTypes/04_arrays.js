@@ -23,13 +23,6 @@
 // console.log(arr.join("*"));
 
 
-// concat() creates  a new array by concatenating 2 . a.conact(b);
-
-
-// flat() to reduce dimension
-// let k = [ [1,2,3],[4,5,6],[7,8,9]]
-// console.log(k.flat());
-
 
 
 // IMPORTANT slice() and splice()
