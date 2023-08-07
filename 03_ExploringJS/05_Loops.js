@@ -73,17 +73,22 @@ m.set("Hardoi","UP30")
 // callback fn is one that does not have a name 
 
 
-function printWallah(item)
-{
-    console.log(item);
-}
-const stud = [ "Mohit" , "Rahul", "Shobhit"]
+// function printWallah(item)
+// {
+//     console.log(item);
+// }
+// const stud = [ "Mohit" , "Rahul", "Shobhit","Mayank"]
+
+
+
 // stud.forEach( function(val){console.log(val)})
 // stud.forEach( (val)=>console.log(`hello ${val}`))
 // stud.forEach(printWallah)   we can give our function to it but dont call it just specify
 
-stud.forEach(function (val , index ,arr)
-{
-    console.log(val +"    "+index+"   "+arr);
-})
+
+
+// stud.forEach(function (val , index ,arr)
+// {
+//     console.log(val +"    "+index+"   "+arr);
+// })
 
