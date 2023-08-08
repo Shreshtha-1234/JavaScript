@@ -92,3 +92,5 @@ m.set("Hardoi","UP30")
 //     console.log(val +"    "+index+"   "+arr);
 // })
 
+// forEach loop can not return any value even if we want
+
