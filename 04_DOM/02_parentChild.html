@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creating a DOM Element</title>
+</head>
+<body>
+    <h1 class="outlet">Chai Nagri</h1>
+    <ul id="cn">
+        <!-- here new line is counted before this comment + this comment + breakline after this -->
+        <li class="ufood">Ishqia Chai</li>
+        <li class="ufood">Cutting Chai</li>
+        <li class="ufood">Mud</li>
+        <li class="ufood">Bun Makhan</li>
+        <li class="ufood">Veg Sandwich</li>
+    </ul>
+</body>
+<script>
+    const element = document.querySelector('#cn');
+    // console.log(element);
+    // console.log(element.children);
+
+    // element.children[1].style.color = "red";
+    // element.lastElementChild.style.color ="green"
+
+    // const chai = document.querySelector(".ufood")
+    // console.log(chai.parentElement)
+
+    console.log(element.childNodes);
+
+
+    </script>
+</html>
