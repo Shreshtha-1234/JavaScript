@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Update Delete</title>
+</head>
+<body>
+    <ul class="lists">
+        <li class ="lang">Python</li>
+        <li class ="lang">JavaScript</li>
+        <li class ="lang">Cpp</li>
+    </ul>
+</body>
+<script>
+
+    // const element = document.querySelector('li:nth-child(2)')   
+   
+    // Way 1: to edit
+    // element.innerHTML = "TypeScript"
+
+    // Way 2: creating a new element and replacing it
+    // const ele = document.createElement('li')
+    // ele.appendChild(document.createTextNode("TypeScript"));
+    // element.replaceWith(ele)
+
+    // Way 3 : changing the outerHTML
+    // element.outerHTML = "<li>TypeScript</li>"
+
+    
+
+    // deleting an element
+
+    const element = document.querySelector('li:last-child')
+    element.remove()
+
+
+
+
+
+    // console.log(element.innerHTML);
+    // console.log(element.outerHTML);
+</script>
+</html>
