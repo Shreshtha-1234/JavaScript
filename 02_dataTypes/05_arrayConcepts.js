@@ -44,5 +44,8 @@ console.log(f);
 console.log(g);
 
 
+// array from nodelist html collection'
+// Array.from(collection)
+
 
 
