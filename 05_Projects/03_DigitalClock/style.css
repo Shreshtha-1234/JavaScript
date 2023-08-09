@@ -1,0 +1,21 @@
+body{
+    background-color: #212121;
+    color :#fff;
+}
+.center
+{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+#clock
+{
+    font-size: 40px;
+    padding: 20px;
+    background-color: orange;
+    min-height:20px;
+    min-width:80px;
+}
