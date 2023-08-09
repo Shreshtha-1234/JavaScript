@@ -1,0 +1,43 @@
+h2{
+    position: relative;
+    left : 40vw;
+}
+#containers{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.yellow
+{
+    height: 10vh;
+    width : 10vh;
+    background-color: yellow;
+    border: 3px solid black;
+}
+.red
+{
+    height: 10vh;
+    width : 10vh;
+    background-color: red;
+    border: 3px solid black;
+}
+.white
+{
+    height: 10vh;
+    width : 10vh;
+    background-color: white;
+    border: 3px solid black;
+}.gray
+{
+    height: 10vh;
+    width : 10vh;
+    background-color: gray;
+    border: 3px solid black;
+}.orange
+{
+    height: 10vh;
+    width : 10vh;
+    background-color: orange;
+    border: 3px solid black;
+}
