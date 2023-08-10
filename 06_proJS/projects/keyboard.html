@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+    <style>
+        #wrapper{
+            height:100vh;
+            display:flex;
+        
+            align-items: center;
+            justify-content: center;
+        }
+        body{
+            background-color: #414141;
+            color : #fff;
+        }
+        table,th,td{
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">  <div id="table"></div></div>
+  
+</body>
+<script>
+    const result = document.getElementById("table");
+    window.addEventListener('keydown',function(obj){
+        result.innerHTML = `
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>KeyCode</th>
+                <th>Code</th>
+            </tr>
+            <tr>
+                <td>${obj.key == ' ' ? "Space" : obj.key}</td>
+                <td>${obj.keyCode}</td>
+                <td>${obj.code}</td>
+            </tr>
+            </table>
+        `;
+    })
+</script>
+</html>
