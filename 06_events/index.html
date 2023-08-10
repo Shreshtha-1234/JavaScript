@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <img src="https://i.stack.imgur.com/ftJXC.png" alt="">
+    <ul style="background-color: #414141;" id="ul">
+        <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"  alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+
+// addig on click : there are 3 ways 
+
+// way 1 : IN HTML write onclick="alert('hello')"     -> onclick takes single value script
+
+// way 2 : selecting that element in JS and then using onclick attribute
+// document.getElementById("photoshop").onclick = () => { alert('hey')}
+
+//way3 : the preferred way . select element in JS and use addEventListener
+// document.getElementById("photoshop").addEventListener('click',(e)=>console.log(e))
+
+// There were some previously used stuff like attachEvent() or on in Jquery
+
+
+
+// types of event in HTML
+// MOUSE EVENTS : onclick , ondblclick , onmousedown
+// KEYBOARD EVENTS :onkeyDown , onKeyUp
+//DRAG AND DROP EVENTS : ondrag , ondrop
+
+
+// HTML Event properties
+document.getElementById("ul").addEventListener("click", function(e){
+    console.log(e.type);    //click
+    console.log(e.target);  // kis element pe click gya
+    console.log(e.timeStamp);
+    console.log(e.currentTarget);  //listener kis event pe tha
+    console.log(e.srcElement); // same as target
+    console.log(e.clientX);
+    console.log(e.clientY);
+    console.log(e.screenX);
+    console.log(e.screenY);
+    console.log(e.pageX);
+    console.log(e.pageY);
+    console.log(e.altKey);
+    console.log(e.ctrlKey);
+    console.log(e.shiftKey);
+    
+})
+
+
+
+
+// The third boolean parameter in addEventListener determines event propagation
+// false : event bubbling i.e. event starts from the point and go outside just like bubble
+// true : event capturing : from top to bottom
+
+//  use e.stopPropagation(); to stop event from propagating
+// use e.stopImmediatePropagation(); When clicking on a button, execute the first event handler, and stop the rest of the event handlers from being executed:
+
+// document.getElementById("owl").addEventListener('click',function(e){
+//     console.log("owl clicked")
+//     e.stopPropagation();
+// }, false)
+
+// document.getElementById("ul").addEventListener('click',function(e){
+//     console.log("li clicked")
+// }, false)
+
+// document.getElementById("google").addEventListener("click",function(e){
+//     e.preventDefault();
+//     e.stopPropagation();
+//     console.log(e);
+// })
+
+
+
+
+
+// Now you need to remove the image which is clicked
+// x.remove() removes x
+// document.getElementById("ul").addEventListener('click',function(e){
+//     console.log(e.target.tagName);
+//     if(e.target.tagName=="IMG")
+//     {
+//     liTag = e.target.parentNode
+//     liTag.parentElement.removeChild(liTag)
+//     // liTag.remove();
+//     }
+// })
+
+</script>
+</html>
