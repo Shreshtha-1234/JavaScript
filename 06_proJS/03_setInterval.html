@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+<body>
+    <h1 id="heading">Hello World</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    var t = 0;
+    const showTime =  function(val)
+    {
+        t=t+1;
+        document.getElementById("heading").innerHTML = `${val} You have spend ${t} seconds on this webpage`;
+    }
+    let reference;
+    document.getElementById("start").addEventListener('click',function()
+    {
+        t=0;
+        reference = setInterval(showTime,1000,"hey");
+    });
+    document.getElementById("stop").addEventListener('click',()=>clearInterval(reference));
+</script>
+</html>
