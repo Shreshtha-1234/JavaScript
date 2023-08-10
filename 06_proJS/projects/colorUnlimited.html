@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited color change</title>
+    <style>
+        body{
+    height:100vh;
+    margin: 10px;
+    padding: 10px;
+    background-color: #414141;
+    color:#fff;
+}
+.btn
+{
+    height:35px;
+    width:90px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding:5px;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Click on start button to get background color changed randomly every 1 second</h2>
+        <button id="start"  class="btn">Start</button>
+        <button id="stop" class="btn">Stop</button>
+    </div>
+</body>
+<script>
+const hexValues = "0123456789ABCDEF";
+
+function RamdomColorChanger()
+{
+let color = "#";
+for(let i=0;i<6;i++)
+{
+    let randomIndex = Math.floor(Math.random()*16);
+    // (Math.round(Math.random()*100 + 1))%16;
+
+    color = color + hexValues.charAt(randomIndex);
+}
+document.body.style.backgroundColor = color
+}
+
+let identifier = '';
+
+document.getElementById("start").addEventListener('click',function(){
+    if(!identifier)  // else if we click start again and again it will keep on changing the back=kgriund more rapidly
+   identifier = setInterval(RamdomColorChanger, 1000 );
+},false);
+
+document.getElementById("stop").addEventListener('click',function(){
+    clearInterval(identifier);
+    identifier=null;
+})
+</script>
+</html>
