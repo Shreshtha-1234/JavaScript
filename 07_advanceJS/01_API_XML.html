@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API request using XML</title>
+    <style>
+        body{
+            margin: 10px;
+            padding: 10px;
+            background-color: #212121;
+        }
+        #card
+        {
+            height : 240px;
+            width: 220px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        #img{
+            height : 180px;
+            width: 200px;
+            position: relative;
+            padding: 10px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        #follow{
+            font-size: 20px ;
+            font-weight: 700;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card"></div>
+</body>
+<script>
+const src = "https://api.github.com/users/hiteshchoudhary";
+
+function showCard(obj)
+{
+    const parentCard = document.getElementById("card");
+    const imgElement = document.createElement("img");
+    imgElement.src = obj.avatar_url;
+    imgElement.id = "img";
+    const followerElement = document.createElement("div")
+    followerElement.innerHTML = `${obj.followers} Followers`;
+    followerElement.id = "follow";
+    parentCard.appendChild(imgElement);
+    parentCard.appendChild(followerElement);
+}
+const xhr = new XMLHttpRequest();
+xhr.open('GET',src);
+    xhr.onreadystatechange = function(){
+        let state = xhr.readyState;
+        if(state === 4)
+        {
+            let res = xhr.responseText;
+            let resObj = JSON.parse(res);
+            console.log(resObj.name);
+            showCard(resObj);
+        }
+    }
+xhr.send();
+</script>
+</html>
