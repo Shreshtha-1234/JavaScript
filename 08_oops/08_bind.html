@@ -1,0 +1,30 @@
+<!-- the bind() method has to be used to prevent losing this. It doesnt overwrite this but it adds both reference unlike call -->
+<!-- calls invokes function at the moment but bind just binds it doesnt call -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click ME</button>
+</body>
+<script>
+    class user{
+        constructor(username){
+            this.username = username;
+
+            document.querySelector('button').addEventListener('click', this.eventHandle.bind(this));
+            // .bind lets you access username in eventHandle
+        }
+        eventHandle(){
+            console.log("hey");
+                console.log(this.username + "pressed button");
+            }
+    }
+    const rahul = new user("rahull")
+</script>
+</html>
