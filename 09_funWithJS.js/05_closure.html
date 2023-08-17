@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body style="background-color: #414141;">
+    <button id = "green"> GREEN</button>
+    <button id="red">RED</button>
+</body>
+<script>
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = "green"
+    // }
+    // document.getElementById("red").onclick = function(){
+    //     document.body.style.backgroundColor = "red"
+    // }
+
+    // This will be working fine but what if we need to do it for 500 buttons
+    // make a function
+    function handleClick(val)
+    {
+        function inner()
+        {
+            document.body.style.backgroundColor = val;
+        }
+        return inner;
+    }
+    document.getElementById("red").onclick = handleClick("red")
+    document.getElementById("green").onclick = handleClick("green")
+    </script>
+</html>
