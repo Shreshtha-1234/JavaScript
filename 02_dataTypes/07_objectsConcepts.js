@@ -23,3 +23,9 @@ let user ={ name :"Shrey" , age : 18 , city :"Lucknow"}
 // 3-> to check whether you have a particular property
 console.log(user.hasOwnProperty("names"));
 console.log(user.hasOwnProperty("name"));
+
+
+
+// Object keys can be dynamically assigned in ES6 by placing an expression in square brackets
+
+
